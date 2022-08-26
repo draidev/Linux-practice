@@ -1,0 +1,5 @@
+sn_ca
+sn_fc
+sn_restapi
+redis-server
+docker
