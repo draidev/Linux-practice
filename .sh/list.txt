@@ -1,4 +1,0 @@
-snc/conf/a.conf
-snc/log/b.log
-snc/data/c.txt
-snc/tmp/backup.data
