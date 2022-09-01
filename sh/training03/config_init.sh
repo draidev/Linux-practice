@@ -120,7 +120,7 @@ function modify_str() {
 function append_workers() {
 	worker_i=1
 	cpu_i=2
-	jq '.threads += {"workers":[]}' ${1}.conf > tmp && mv tmp ${1}.conf
+	jq '.threads={"workers":[]}' ${1}.conf > tmp && mv tmp ${1}.conf
 	while [[ $worker_i -le ${2} ]]; do
 		jq '.threads.workers += [{"name":"worker'$worker_i'", "cpu":'$cpu_i'}]' ${1}.conf > tmp && mv tmp ${1}.conf
 		((worker_i+=1))
